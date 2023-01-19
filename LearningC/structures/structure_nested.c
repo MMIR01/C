@@ -1,6 +1,6 @@
 /***********************************
-/* MMIR01. Structures
-/* Nested structures
+MMIR01. Structures
+Nested structures
 ************************************/
 
 #include <stdio.h>

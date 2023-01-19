@@ -1,0 +1,3 @@
+INPUT FILE
+File used in file_copy.c 
+

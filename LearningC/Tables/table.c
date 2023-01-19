@@ -1,8 +1,8 @@
 /***********************************
-/* MMIR01. Learn a bit more about
-/* tables.
-/* The program calculates the average
-/* mark of a student
+MMIR01. Learn a bit more about
+tables.
+The program calculates the average
+mark of a student
 ************************************/
 
 #include <stdio.h>
@@ -24,6 +24,8 @@ int main()
 	//Calculate the average
 	for (i=0; i<TOTALEXAMS;i++){
 		average += marks[i];
+		//Alternative
+		//average += *(marks+i);
 	}
 	average /= TOTALEXAMS;
 	

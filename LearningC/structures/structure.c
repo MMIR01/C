@@ -1,5 +1,5 @@
 /***********************************
-*MMIR01. Structures
+MMIR01. Structures
 Basic knowledge
 ************************************/
 

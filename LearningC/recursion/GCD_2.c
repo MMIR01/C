@@ -1,5 +1,5 @@
 /***********************************
-*MMIR01. Recursion C
+MMIR01. Recursion C
 Best way
 ************************************/
 
@@ -14,9 +14,9 @@ int main()
 	int res = 0;
 	printf("GCD\n");
 	printf("Introduce a positive integer:\n");
-	scanf("%d", n);
+	scanf("%d", &n);
 	printf("Introduce a second positive integer:\n");
-	scanf("%d", m);
+	scanf("%d", &m);
 	res = GCD(n,m);
 	printf("Result: %d\n", res);
 	

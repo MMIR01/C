@@ -1,7 +1,7 @@
 /***********************************
-/* MMIR01. INPUT/OUTPUT functions
-/* from the standard library
-/* Example: copy a file
+MMIR01. INPUT/OUTPUT functions
+from the standard library
+Example: copy a file
 ************************************/
 
 #include <stdio.h>
@@ -14,35 +14,39 @@ int main(int argc, char *argv[])
 	int error = 0;
 	
 	if (argc != 3)
-		printf("Usage: file_copy source target");
+		printf("Error. Usage: file_copy source target\n");
 	else {
 		fsource = fopen(argv[1], "r");	
 		ftarget = fopen(argv[2], "w");	
 		
-		if (fsource == NULL)
-			printf("Error %s cannot be opened", argv[1]);
+		if (fsource == NULL) {
+			//perror prints a custom message before the error
+			perror("Error");
+			printf("%s cannot be opened\n", argv[1]);
+		}
 		else if (ftarget == NULL){
-			printf("Error %s cannot be opened", argv[2]);
+			perror("Error");
+			printf("Error %s cannot be opened\n", argv[2]);
 			fclose(fsource);
 		}else{
-			printf("Copying the file...");
+			printf("Copying the file...\n");
 			//Character by character
-			do{
-				character = fgetc(fsource);
-				if (character != EOF)
-					character = fputc(character, ftarget);
-			} while(character != NULL);
+			while ((character = fgetc(fsource)) != EOF){
+				fputc(character, ftarget);
+			}
 			
-			/*Reemplace this block, just using perror*/
-			//perror("Error: ");
+			//Checking fgetc reached the end of the file
 			if(feof(fsource)!=0)
-				printf("Finished");
-			/*We finished to copy, but we are not at the end 
-			/*of the file. So it should be an error*/
-			else if(error = ferror(fsource))
+				printf("Finished\n");
+			//if eof is not found, there must be an error
+			else if((error = ferror(fsource)) != 0) {
+				perror("Error");
 				printf("Error during the copy: %d", error);
-			else if(error = ferror(ftarget))
+			}
+			else if((error = ferror(ftarget)) != 0) {
+				perror("Error");
 				printf("Error during the copy: %d", error);
+			}
 			
 			fclose(fsource);
 			fclose(ftarget);

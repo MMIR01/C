@@ -1,9 +1,10 @@
 /***********************************
-/* MMIR01. Dynamic Memory Allocation
-/* Multidimensional tables (I)
+MMIR01. Dynamic Memory Allocation
+Multidimensional tables (II)
 ************************************/
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #define N 2
 #define M 3
@@ -39,7 +40,7 @@ int main()
 		pTable[0][0] = 1;
 		
 		/*Access to other elements of the table
-		/*like multidimensional tables*/
+		like multidimensional tables*/
 		*(pTable[0]+1) = 2;
 		pTable[0][2] = 3;
 		(*(pTable+1))[0] = 4;

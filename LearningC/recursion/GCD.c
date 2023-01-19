@@ -1,11 +1,11 @@
 /***********************************
-*MMIR01. Recursion C
+MMIR01. Recursion C
 Factorial: n! = n * (n-1!)
 ************************************/
 
 #include <stdio.h>
 
-int GCD (int n, int m);
+int GCD (int n, int m, int div);
 
 int main()
 {
@@ -14,9 +14,9 @@ int main()
 	int res = 0;
 	printf("GCD\n");
 	printf("Introduce a positive integer:\n");
-	scanf("%d", n);
+	scanf("%d", &n);
 	printf("Introduce a second positive integer:\n");
-	scanf("%d", m);
+	scanf("%d", &m);
 	if (n > m)
 		res = GCD(n,m,m);
 	else
@@ -27,10 +27,11 @@ int main()
 }
 
 int GCD (int n, int m, int div){
-if((n%div ==0) || (m%div == 0))
-		res = div;
-	else
-		res = GCD(n,m,div-1);
-	
-	return res;
+	int res = 0;
+	if((n%div ==0) || (m%div == 0))
+			res = div;
+		else
+			res = GCD(n,m,div-1);
+		
+		return res;
 };

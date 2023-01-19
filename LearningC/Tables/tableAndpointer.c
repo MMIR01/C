@@ -1,8 +1,8 @@
 /***********************************
-/* MMIR01. Table and pointer
-/* How to work with the identifier
-/* of a table; and the difference 
-/* with a pointer
+MMIR01. Table and pointer
+How to work with the identifier
+of a table; and the difference 
+with a pointer
 ************************************/
 
 #include <stdio.h>

@@ -1,9 +1,9 @@
 /***********************************
-/* MMIR01. Learn a bit more about
-/* multi tables. How to pass a multi
-/* tabla as parameter
-/* The program calculates the average
-/* mark of students
+MMIR01. Learn a bit more about
+multi tables. How to pass a multi
+tabla as parameter
+The program calculates the average
+mark of students
 ************************************/
 
 #include <stdio.h>
@@ -16,8 +16,8 @@ float average_class(float marksClass[][TOTALEXAMS], int students, int exams);
 //Another way to declare the function
 //float average_class(float (float *marksClass[TOTALEXAMS), int students, int exams);
 /*LOOK OUT!
-/*this is a table of pointers > float *marksClass[TOTALEXAMS)
-/*this is a pointer to a table > float (*marksClass)[TOTALEXAMS)
+this is a table of pointers > float *marksClass[TOTALEXAMS)
+this is a pointer to a table > float (*marksClass)[TOTALEXAMS)
 */
 
 int main()

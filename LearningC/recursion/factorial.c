@@ -1,5 +1,5 @@
 /***********************************
-*MMIR01. Recursion C
+MMIR01. Recursion C
 Factorial: n! = n * (n-1!)
 ************************************/
 
@@ -12,7 +12,7 @@ int main()
 	int n = 0;
 	int res = 0;
 	printf("Introduce a positive integer:\n");
-	scanf("%d", n);
+	scanf("%d", &n);
 	res = factorial(n);
 	printf("Result: %d\n", res);
 	
@@ -26,4 +26,4 @@ int res = 0;
 	else
 		res = 1;
 	return res;
-};
+}

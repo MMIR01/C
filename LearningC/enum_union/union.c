@@ -1,5 +1,5 @@
 /***********************************
-/* MMIR01. Union
+MMIR01. Union
 ************************************/
 
 #include <stdio.h>
@@ -14,18 +14,18 @@ int main()
 	
 	//Initialize first value
 	union date instant = {12};
-	printf("Day: %d\n", instant.day);
-	//Empty
-	printf("Month: %s\n", instant.month);
+	printf("Day: %d\n", instant.day);     //OK
+	printf("Month: %s\n", instant.month); //Empty
 	
 	/*Error. Unions cannot have two fields with value, due to they are 
-	/*in the same memory position*/
-	//.month = "January";
-	//printf("Month: %s\n", instant.month);
+	in the same memory position*/
+	strcpy(instant.month, "January");
+	printf("Day: %d\n", instant.day);		//Unknown value
+	printf("Month: %s\n", instant.month);   //OK
 	
 	union date instant2 = {15, "January"};
 	printf("Day 2: %d\n", instant2.day);
-	//Print nothing. instant2 is initialized just with the value 12
+	//Print nothing. instant2 is initialized just with the value 15
 	printf("Month2: %s\n", instant2.month);
 	
 	union date instant3 = {.month = "March"};

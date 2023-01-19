@@ -1,6 +1,6 @@
 /***********************************
-/* MMIR01. Learn a bit more about
-/* pointers
+MMIR01. Learn a bit more about
+pointers
 ************************************/
 
 #include <stdio.h>
@@ -13,7 +13,7 @@ int main()
 	int * pint = &integer;
 	
 	printf("Value of the integer: %d\n", integer);
-	printf("Same value using the pointer: %d\n", integer);
+	printf("Same value using the pointer: %d\n", *pint);
 	
 	// Pointer to pointer integer
 	int ** ppint = &pint;
