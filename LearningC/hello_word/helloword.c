@@ -1,5 +1,5 @@
 /***********************************
-*MMIR01. First program
+MMIR01. First program
 Show a message in the console
 ************************************/
 
